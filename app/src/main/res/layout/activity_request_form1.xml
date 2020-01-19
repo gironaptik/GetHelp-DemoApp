@@ -59,26 +59,28 @@
         android:text="או להכניס מלל חופשי"/>
 
     <ImageView
-        android:id="@+id/helptake"
+        android:id="@+id/helptake_1"
         android:layout_width="380dp"
         android:layout_height="50dp"
-        android:src="@drawable/smallbutton"
-        android:onClick="updateButton"/>
+        android:src="@drawable/smallbutton_1"/>
 
     <ImageView
+        android:id="@+id/helptake_2"
         android:layout_width="380dp"
         android:layout_height="50dp"
-        android:src="@drawable/smallbutton2"/>
+        android:src="@drawable/smallbutton_2"/>
 
     <ImageView
+        android:id="@+id/helptake_3"
         android:layout_width="380dp"
         android:layout_height="50dp"
-        android:src="@drawable/smallbutton3"/>
+        android:src="@drawable/smallbutton_3"/>
 
     <ImageView
+        android:id="@+id/helptake_4"
         android:layout_width="390dp"
         android:layout_height="50dp"
-        android:src="@drawable/smallbutton4"/>
+        android:src="@drawable/smallbutton_4"/>
 
     <TextView
         android:id="@+id/textView"
@@ -99,6 +101,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="bottom"
+            android:tag="off"
             android:src="@drawable/back"/>
         <LinearLayout
             android:layout_width="280dp"
