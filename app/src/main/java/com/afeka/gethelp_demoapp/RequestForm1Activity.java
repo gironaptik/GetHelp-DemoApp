@@ -80,6 +80,8 @@ public class RequestForm1Activity extends AppCompatActivity implements View.OnCl
                 viStatus.setImageResource(R.drawable.vion);
                 textBox.setText("צריכה לשלוח מסמכים באתר של ביטוח לאומי");
                 break;
+            case R.id.back:
+                startActivity(new Intent(this, NewRequestActivity.class));
             case R.id.proceed:
                 if(viStatus.getTag().toString().equals("on"))
                     startActivity(new Intent(this, WhenActivity.class));

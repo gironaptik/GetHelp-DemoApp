@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WhereActivity"></activity>
+        <activity android:name=".EmergencyScreen"></activity>
+        <activity android:name=".SentRequest" />
+        <activity android:name=".SendingRequest" />
+        <activity android:name=".AdditionActivity" />
+        <activity android:name=".WhereActivity" />
         <activity android:name=".WhenActivity" />
         <activity android:name=".RequestForm1Activity" />
         <activity android:name=".NewRequestActivity" />

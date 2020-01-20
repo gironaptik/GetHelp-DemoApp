@@ -72,6 +72,8 @@ public class WhenActivity extends AppCompatActivity implements TimePickerDialog.
                 if(forward2.getTag().toString().equals("on"))
                     startActivity(new Intent(this, WhereActivity.class));
                 break;
+            case R.id.back2:
+                startActivity(new Intent(this, NewRequestActivity.class));
             default:
                 break;
         }

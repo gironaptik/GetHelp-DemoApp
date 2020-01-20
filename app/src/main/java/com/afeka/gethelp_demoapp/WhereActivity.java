@@ -22,6 +22,7 @@ public class WhereActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_where);
+        getSupportActionBar().hide();
 
         requestButton_1 = findViewById(R.id.where02);
         requestButton_2 = findViewById(R.id.where03);
@@ -101,9 +102,11 @@ public class WhereActivity extends AppCompatActivity implements View.OnClickList
                 viStatus.setTag("on");
                 viStatus.setImageResource(R.drawable.vion);
                 break;
+            case R.id.back2:
+                startActivity(new Intent(this, NewRequestActivity.class));
             case R.id.proceed:
                 if(viStatus.getTag().toString().equals("on"))
-//                    startActivity(new Intent(this, WhenActivity.class));
+                    startActivity(new Intent(this, AdditionActivity.class));
                 break;
             default:
                 break;

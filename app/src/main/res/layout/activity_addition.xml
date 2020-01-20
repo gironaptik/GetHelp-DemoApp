@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0097A7"
     android:orientation="vertical"
-    tools:context=".NewRequestActivity">
+    tools:context=".AdditionActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:text="שלום, שולה" />
+            android:text="בקשה חדשה" />
 
         <ImageView
             android:layout_width="30dp"
@@ -38,70 +37,71 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
 
         <ImageView
-            android:id="@+id/newRequest"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:layout_margin="20dp"
-            android:onClick="jump3"
-            android:src="@drawable/newrequest" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="בקשה חדשה" />
+            android:src="@drawable/addition"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="ניתן להוסיף מלל חופשי" />
+
+            <EditText
+
+                android:layout_marginTop="20dp"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:text="הקלד מלל חופשי כאן"
+            android:gravity="top"/>
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_margin="10dp"
             android:orientation="horizontal">
-
+            <ImageView
+                android:id="@+id/proceed02"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:tag="off"
+                android:onClick="next"
+                android:src="@drawable/forward"/>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+
                 android:orientation="vertical">
-
                 <ImageView
-                    android:id="@+id/newQuestion"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/question_mark_icon" />
-
+                    android:src="@drawable/mic"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="שאלה חדשה" />
+                    android:text="באפשרות גם להקליט"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/emegency"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/emegencybutton"
-                    android:onClick="emergencyScreen"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="כפתור חירום!"
-                    android:onClick="emergencyScreen"/>
-            </LinearLayout>
-
+            <ImageView
+                android:id="@+id/back3"
+                android:onClick="backRequestScreen"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:src="@drawable/cancel"/>
         </LinearLayout>
+
+
     </LinearLayout>
+
+
 </LinearLayout>

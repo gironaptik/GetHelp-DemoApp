@@ -6,21 +6,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class NewRequestActivity extends AppCompatActivity {
+public class AdditionActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_request);
+        setContentView(R.layout.activity_addition);
         getSupportActionBar().hide();
+    }
+
+    public void next(View view){
+        startActivity(new Intent(this, SendingRequest.class));
 
     }
 
-    public void jump3(View view) {
-        startActivity(new Intent(this, RequestForm1Activity.class));
-    }
+    public void backRequestScreen(View view){
+        startActivity(new Intent(this, NewRequestActivity.class));
 
-    public void emergencyScreen(View view){
-        startActivity(new Intent(this, EmergencyScreen.class));
     }
 }
