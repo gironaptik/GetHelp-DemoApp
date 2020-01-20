@@ -14,7 +14,6 @@ public class RequestForm1Activity extends AppCompatActivity implements View.OnCl
     ImageView requestButton_2;
     ImageView requestButton_3;
     ImageView requestButton_4;
-    ImageView proceedutton;
     TextView textBox;
     ImageView viStatus;
 
@@ -41,65 +40,52 @@ public class RequestForm1Activity extends AppCompatActivity implements View.OnCl
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.helptake_1:
-//                proceedutton = findViewById(R.id.proceed);
                 textBox = findViewById(R.id.textView);
                 requestButton_1.setImageResource(R.drawable.smallbuttonpress_1);
                 requestButton_2.setImageResource(R.drawable.smallbutton_2);
                 requestButton_3.setImageResource(R.drawable.smallbutton_3);
                 requestButton_4.setImageResource(R.drawable.smallbutton_4);
-//                proceedutton.setImageResource(R.drawable.forward);
                 textBox.setText("לקחת אותי לקופת חולים");
                 viStatus.setTag("on");
                 viStatus.setImageResource(R.drawable.vion);
                 break;
 
             case R.id.helptake_2:
-//                proceedutton = findViewById(R.id.proceed);
                 textBox = findViewById(R.id.textView);
                 requestButton_1.setImageResource(R.drawable.smallbutton_1);
                 requestButton_2.setImageResource(R.drawable.smallbuttonpress_2);
                 requestButton_3.setImageResource(R.drawable.smallbutton_3);
                 requestButton_4.setImageResource(R.drawable.smallbutton_4);
-//                proceedutton.setImageResource(R.drawable.forward);
                 textBox.setText("חזרתי מקניות וקשה לי להרים לבית");
                 viStatus.setTag("on");
                 viStatus.setImageResource(R.drawable.vion);
                 break;
             case R.id.helptake_3:
-//                proceedutton = findViewById(R.id.proceed);
                 textBox = findViewById(R.id.textView);
                 requestButton_1.setImageResource(R.drawable.smallbutton_1);
                 requestButton_2.setImageResource(R.drawable.smallbutton_2);
                 requestButton_3.setImageResource(R.drawable.smallbuttonpress_3);
                 requestButton_4.setImageResource(R.drawable.smallbutton_4);
-//                proceedutton.setImageResource(R.drawable.forward);
                 textBox.setText("הטלויזיה רושמת שאין אות");
                 viStatus.setTag("on");
                 viStatus.setImageResource(R.drawable.vion);
                 break;
             case R.id.helptake_4:
-//                proceedutton = findViewById(R.id.proceed);
                 textBox = findViewById(R.id.textView);
                 requestButton_1.setImageResource(R.drawable.smallbutton_1);
                 requestButton_2.setImageResource(R.drawable.smallbutton_2);
                 requestButton_3.setImageResource(R.drawable.smallbutton_3);
                 requestButton_4.setImageResource(R.drawable.smallbuttonpress_4);
-//                proceedutton.setImageResource(R.drawable.forward);
                 viStatus.setTag("on");
                 viStatus.setImageResource(R.drawable.vion);
                 textBox.setText("צריכה לשלוח מסמכים באתר של ביטוח לאומי");
                 break;
             case R.id.proceed:
                 if(viStatus.getTag().toString().equals("on"))
-                    startActivity(new Intent(this, whenActivity.class));
+                    startActivity(new Intent(this, WhenActivity.class));
                 break;
             default:
                 break;
         }
-    }
-
-    private void jump04() {
-        if(viStatus.getTag().toString().equals("on"))
-            startActivity(new Intent(this, whenActivity.class));
     }
 }

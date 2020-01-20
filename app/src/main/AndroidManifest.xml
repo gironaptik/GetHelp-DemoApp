@@ -11,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RequestForm1Activity"></activity>
+        <activity android:name=".WhereActivity"></activity>
+        <activity android:name=".WhenActivity" />
+        <activity android:name=".RequestForm1Activity" />
         <activity android:name=".NewRequestActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".whenActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
