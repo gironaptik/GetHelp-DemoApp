@@ -24,6 +24,8 @@ public class HomeActivity extends AppCompatActivity {
     CheckBox volunteer;
     CheckBox social;
     CheckBox safety;
+    CheckBox male;
+    CheckBox female;
     ImageView viStatus;
 
 
@@ -42,8 +44,16 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void setUserName(View view) {
+        help = findViewById(R.id.checkBoxAsking);
+        volunteer = findViewById(R.id.checkBoxVolunteer);
         userName = findViewById(R.id.textUserName);
-        userName.setText("שולה");
+        if(help.isChecked()) {
+            userName.setText("שולה");
+        }
+        else
+            if(volunteer.isChecked()){
+                userName.setText("רונן");
+            }
         vistatus();
     }
 
@@ -57,7 +67,16 @@ public class HomeActivity extends AppCompatActivity {
 
     public void setDateBirth(View view) {
         userDateBirth = findViewById(R.id.textUserDateBirth);
-        userDateBirth.setText("1955");
+        help = findViewById(R.id.checkBoxAsking);
+        volunteer = findViewById(R.id.checkBoxVolunteer);
+        userName = findViewById(R.id.textUserName);
+        if(help.isChecked()) {
+            userDateBirth.setText("1955");
+        }
+        else
+        if(volunteer.isChecked()){
+            userDateBirth.setText("1990");
+        }
         userDateBirth.setError(null);
         vistatus();
     }
@@ -75,10 +94,17 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void setCheckBoxAsking(View view) {
+        female = findViewById(R.id.checkBoxFemale);
+        female.setChecked(true);
+        male = findViewById(R.id.checkBoxMale);
+        male.setChecked(false);
         userRole = findViewById(R.id.textRole_edit_text);
         volunteer = findViewById(R.id.checkBoxVolunteer);
         social = findViewById(R.id.checkBoxSocialservice);
         safety = findViewById(R.id.checkBox911);
+        userPicture = findViewById(R.id.userpicture);
+        userPicture.setImageResource(R.drawable.userpicturefull);
+        userPicture.setTag("ask");
         if(volunteer.isChecked())
             volunteer.toggle();
         if(social.isChecked())
@@ -90,10 +116,17 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void setCheckBoxVolunteer(View view) {
+        male = findViewById(R.id.checkBoxMale);
+        male.setChecked(true);
+        female = findViewById(R.id.checkBoxFemale);
+        female.setChecked(false);
         userRole = findViewById(R.id.textRole_edit_text);
         help = findViewById(R.id.checkBoxAsking);
         social = findViewById(R.id.checkBoxSocialservice);
         safety = findViewById(R.id.checkBox911);
+        userPicture = findViewById(R.id.userpicture);
+        userPicture.setImageResource(R.drawable.voluntteravatar);
+        userPicture.setTag("volunteer");
         if(help.isChecked())
             help.toggle();
         if(social.isChecked())
@@ -105,6 +138,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void setCheckBoxSocialservice(View view) {
+
         userRole = findViewById(R.id.textRole_edit_text);
         help = findViewById(R.id.checkBoxAsking);
         volunteer = findViewById(R.id.checkBoxVolunteer);
@@ -123,7 +157,7 @@ public class HomeActivity extends AppCompatActivity {
         userRole = findViewById(R.id.textRole_edit_text);
         help = findViewById(R.id.checkBoxAsking);
         volunteer = findViewById(R.id.checkBoxVolunteer);
-        social = findViewById(R.id.checkBox911);
+        social = findViewById(R.id.checkBoxSocialservice);
         if(help.isChecked())
             help.toggle();
         if(volunteer.isChecked())
@@ -149,8 +183,15 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void jump(View view){
-        viStatus = findViewById(R.id.viStatus);
+        userPicture = findViewById(R.id.userpicture);
         if(viStatus.getTag().toString().equals("on"))
-            startActivity(new Intent(this, SettingsActivity.class));
-    }
+            if(userPicture.getTag().toString().equals("ask")) {
+                startActivity(new Intent(this, SettingsActivity.class));
+            }
+            else
+            if(userPicture.getTag().toString().equals("volunteer")) {
+                startActivity(new Intent(this, ListRequestActivity.class));
+            }
+        }
+
 }

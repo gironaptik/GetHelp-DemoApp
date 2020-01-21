@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0097A7"
+    android:background="#FFFFFF"
     android:orientation="vertical"
     tools:context=".NewRequestActivity">
 
@@ -84,6 +84,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="emergencyScreen"
                 android:orientation="vertical">
 
                 <ImageView
@@ -91,17 +92,34 @@
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/emegencybutton"
-                    android:onClick="emergencyScreen"/>
+                    android:src="@drawable/emegencybutton" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="כפתור חירום!"
-                    android:onClick="emergencyScreen"/>
+                    android:text="כפתור חירום!" />
             </LinearLayout>
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:onClick="limberest"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/list" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="רשימת הבקשות" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

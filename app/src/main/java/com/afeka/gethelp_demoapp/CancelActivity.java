@@ -6,17 +6,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class EmergencyScreen extends AppCompatActivity {
+public class CancelActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emergency_screen);
+        setContentView(R.layout.activity_cancel);
         getSupportActionBar().hide();
 
     }
 
-    public void emeregencyExit(View view){
+    public void finalRequest(View view){
         startActivity(new Intent(this, NewRequestActivity.class));
 
     }

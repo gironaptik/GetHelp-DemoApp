@@ -6,18 +6,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class EmergencyScreen extends AppCompatActivity {
+public class ListRequestActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emergency_screen);
+        setContentView(R.layout.activity_list_request);
         getSupportActionBar().hide();
+    }
+
+    public void cancelRequest(View view){
+        startActivity(new Intent(this, CancelActivity.class));
 
     }
 
-    public void emeregencyExit(View view){
-        startActivity(new Intent(this, NewRequestActivity.class));
+    public void acceptRequest(View view){
+        startActivity(new Intent(this, AcceptedActivity.class));
 
     }
 }

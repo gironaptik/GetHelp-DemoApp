@@ -12,6 +12,8 @@ public class SentRequest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sent_request);
+        getSupportActionBar().hide();
+
     }
 
     public void finalRequest(View view){

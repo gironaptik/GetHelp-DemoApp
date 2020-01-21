@@ -23,4 +23,8 @@ public class NewRequestActivity extends AppCompatActivity {
     public void emergencyScreen(View view){
         startActivity(new Intent(this, EmergencyScreen.class));
     }
+
+    public void limberest(View view){
+        startActivity(new Intent(this, ListRequestActivity.class));
+    }
 }

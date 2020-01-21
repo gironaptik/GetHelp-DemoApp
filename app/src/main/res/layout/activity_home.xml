@@ -45,6 +45,7 @@
             android:layout_width="80dp"
             android:layout_gravity="center"
             android:layout_height="80dp"
+            android:tag="1"
             android:src="@drawable/userpicture"
             android:layout_marginTop="30dp"
             android:layout_centerHorizontal="true"
@@ -274,6 +275,7 @@
                     android:button="@null"
                     android:layout_gravity="right"
                     android:onClick="setCheckBoxAsking"
+                    android:tag="1"
                     android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
                     android:text=" מבקש עזרה" />
 
@@ -284,6 +286,7 @@
                     android:button="@null"
                     android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
                     android:text=" מתנדב"
+                    android:tag="1"
                     android:onClick="setCheckBoxVolunteer"
                     android:layout_gravity="right"/>
 
