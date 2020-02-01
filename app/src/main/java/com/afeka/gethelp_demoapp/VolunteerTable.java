@@ -55,4 +55,9 @@ public class VolunteerTable extends AppCompatActivity {
         textMessage.setText("הבקשה אושרה, נשלחה התראה");
     }
 
+    @Override
+    public void onBackPressed() {
+
+    }
+
 }

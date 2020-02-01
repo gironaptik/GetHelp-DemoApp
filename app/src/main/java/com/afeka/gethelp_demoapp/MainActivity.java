@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -32,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, SPLASH_TIME_OUT);
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 
 }

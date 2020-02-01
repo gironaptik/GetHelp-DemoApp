@@ -83,11 +83,17 @@ public class RequestForm1Activity extends AppCompatActivity implements View.OnCl
             case R.id.back:
                 startActivity(new Intent(this, NewRequestActivity.class));
             case R.id.proceed:
-                if(viStatus.getTag().toString().equals("on"))
+                if(viStatus.getTag().toString().equals("on")) {
                     startActivity(new Intent(this, WhenActivity.class));
-                break;
+                }
+                    break;
             default:
                 break;
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 }

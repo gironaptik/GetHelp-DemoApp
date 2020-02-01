@@ -18,6 +18,10 @@ public class AcceptedActivity extends AppCompatActivity {
 
     public void finalRequest(View view){
         startActivity(new Intent(this, VolunteerTable.class));
+    }
+
+    @Override
+    public void onBackPressed() {
 
     }
 }

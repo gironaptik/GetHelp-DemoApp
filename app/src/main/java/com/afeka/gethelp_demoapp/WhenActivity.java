@@ -87,5 +87,10 @@ public class WhenActivity extends AppCompatActivity implements TimePickerDialog.
                 forward2.setTag("on");
             }
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }
 

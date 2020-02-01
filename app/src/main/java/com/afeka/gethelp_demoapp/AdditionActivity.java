@@ -17,11 +17,14 @@ public class AdditionActivity extends AppCompatActivity {
 
     public void next(View view){
         startActivity(new Intent(this, SendingRequest.class));
-
     }
 
     public void backRequestScreen(View view){
         startActivity(new Intent(this, NewRequestActivity.class));
+    }
+
+    @Override
+    public void onBackPressed() {
 
     }
 }

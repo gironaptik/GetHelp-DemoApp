@@ -18,6 +18,10 @@ public class EmergencyScreen extends AppCompatActivity {
 
     public void emeregencyExit(View view){
         startActivity(new Intent(this, NewRequestActivity.class));
+    }
+
+    @Override
+    public void onBackPressed() {
 
     }
 }

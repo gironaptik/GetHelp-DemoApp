@@ -113,4 +113,9 @@ public class WhereActivity extends AppCompatActivity implements View.OnClickList
         }
 
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

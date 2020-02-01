@@ -27,13 +27,16 @@ public class ListRequestActivity extends AppCompatActivity {
 
     public void acceptRequest(View view){
         startActivity(new Intent(this, AcceptedActivity.class));
-
     }
 
     public void finalRequest(View view){
         Intent activityChangeIntent = new Intent(this, NewRequestActivity.class);
         activityChangeIntent.putExtra(Status, whereTo);
         this.startActivity(activityChangeIntent);
+    }
+
+    @Override
+    public void onBackPressed() {
 
     }
 }

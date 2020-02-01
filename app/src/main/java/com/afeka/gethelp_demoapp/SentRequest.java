@@ -24,4 +24,9 @@ public class SentRequest extends AppCompatActivity {
         activityChangeIntent.putExtra(Status, whereTo);
         this.startActivity(activityChangeIntent);
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

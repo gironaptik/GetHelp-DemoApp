@@ -33,12 +33,18 @@ public class NewRequestActivity extends AppCompatActivity {
     public void limberest(View view){
         if(whereTo.equals(null))
             whereTo = "withRequest";
-        if(whereTo.equals("empty"))
+        if(whereTo.equals("empty")) {
             startActivity(new Intent(this, EmptyListRequest.class));
+        }
         else{
             if(whereTo.equals("withRequest")){
                 startActivity(new Intent(this, ListRequestActivity.class));
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 }
