@@ -190,7 +190,7 @@ public class HomeActivity extends AppCompatActivity {
             }
             else
             if(userPicture.getTag().toString().equals("volunteer")) {
-                startActivity(new Intent(this, ListRequestActivity.class));
+                startActivity(new Intent(this, VolunteerTable.class));
             }
         }
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:orientation="vertical"
-    tools:context=".CancelActivity">
+    tools:context=".EmptyListRequest">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,12 +15,13 @@
         android:backgroundTint="#C3FF6969"
         android:orientation="horizontal">
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:text="מחיקת בקשה" />
+            android:text="רשימת בקשות" />
 
         <ImageView
             android:layout_width="30dp"
@@ -29,48 +30,37 @@
             android:layout_margin="10dp"
             android:src="@drawable/menubutton" />
     </RelativeLayout>
-
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:layout_marginTop="50dp">
-
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="200dp"
-            android:layout_height="300dp"
-            android:src="@drawable/logo"/>
-
+        android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
             android:layout_alignBottom="@id/logo"
             android:layout_marginBottom="-127dp"
             android:fontFamily="sans-serif-condensed"
-            android:gravity="center"
-            android:text="הבקשה נמחקה מהרשימה"
+            android:text="לא קיימות בקשות"
             android:textColor="#D33433"
             android:textSize="50sp"
             android:typeface="serif" />
-
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="bottom"
+            android:gravity="bottom|left"
             android:orientation="horizontal">
 
             <ImageView
+                android:layout_gravity="bottom"
                 android:id="@+id/proceed"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_gravity="bottom"
                 android:src="@drawable/forward"
                 android:onClick="finalRequest"
                 android:tag="off" />
         </LinearLayout>
     </LinearLayout>
-
 
 </LinearLayout>

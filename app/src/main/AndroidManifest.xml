@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AcceptedActivity"></activity>
+        <activity android:name=".VolunteerTable"></activity>
+        <activity android:name=".EmptyListRequest" />
+        <activity android:name=".AcceptedActivity" />
         <activity android:name=".CancelActivity" />
         <activity android:name=".ListRequestActivity" />
         <activity android:name=".EmergencyScreen" />

@@ -8,6 +8,9 @@ import android.view.View;
 
 public class SentRequest extends AppCompatActivity {
 
+    private String Status = "status";
+    String whereTo = "withRequest";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +20,8 @@ public class SentRequest extends AppCompatActivity {
     }
 
     public void finalRequest(View view){
-        startActivity(new Intent(this, NewRequestActivity.class));
-
+        Intent activityChangeIntent = new Intent(this, NewRequestActivity.class);
+        activityChangeIntent.putExtra(Status, whereTo);
+        this.startActivity(activityChangeIntent);
     }
 }

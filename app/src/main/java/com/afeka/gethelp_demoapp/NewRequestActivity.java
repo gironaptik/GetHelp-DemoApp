@@ -8,11 +8,17 @@ import android.view.View;
 
 public class NewRequestActivity extends AppCompatActivity {
 
+    private Intent intent;
+    private String Status = "status";
+    String whereTo = "empty";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_request);
         getSupportActionBar().hide();
+        intent = getIntent();
+        whereTo = intent.getStringExtra(Status);
 
     }
 
@@ -25,6 +31,14 @@ public class NewRequestActivity extends AppCompatActivity {
     }
 
     public void limberest(View view){
-        startActivity(new Intent(this, ListRequestActivity.class));
+        if(whereTo.equals(null))
+            whereTo = "withRequest";
+        if(whereTo.equals("empty"))
+            startActivity(new Intent(this, EmptyListRequest.class));
+        else{
+            if(whereTo.equals("withRequest")){
+                startActivity(new Intent(this, ListRequestActivity.class));
+            }
+        }
     }
 }

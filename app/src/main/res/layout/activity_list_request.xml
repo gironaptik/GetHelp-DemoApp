@@ -37,6 +37,7 @@
         android:gravity="top">
 
         <TableLayout
+            android:id="@+id/requestTable"
             android:layout_width="match_parent"
             android:gravity="top"
             android:layoutDirection="rtl"
@@ -45,10 +46,10 @@
 >
 
             <TableRow
-                android:id="@+id/row1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#FC7679"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:gravity="center">
@@ -58,6 +59,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
                     android:layout_marginBottom="5dp"
                     android:text="נסיעה לבית חולים" />
 
@@ -66,6 +68,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginBottom="5dp"
                     android:text="שולה" />
 
@@ -75,7 +78,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    android:text="הרצל 3, פתח תקווה" />
+                    android:text="שרת 22, פתח תקווה" />
 
 
                 <!-- Add elements/columns in the first row-->
@@ -105,241 +108,30 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <ImageView
+                        android:id="@+id/cancel1"
                         android:layout_width="20dp"
                         android:layout_height="30dp"
                         android:onClick="cancelRequest"
                         android:src="@drawable/cancel"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_marginRight="5dp"
-                        android:onClick="acceptRequest"
-                        android:layout_height="30dp"
-                        android:src="@drawable/vion"/>
-                </LinearLayout>
-
-            </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FC7679"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="עזרה בהרמת קניות" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="תיקי" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="העצמאות 40, רחובות" />
-
-
-                <!-- Add elements/columns in the first row-->
-
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/row3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="#ADA4A4"
-                android:gravity="center">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="מחר, 18:00" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="30dp"
-                        android:onClick="cancelRequest"
-                        android:src="@drawable/cancel"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_marginRight="5dp"
-                        android:onClick="acceptRequest"
-                        android:layout_height="30dp"
-                        android:src="@drawable/vion"/>
                 </LinearLayout>
 
             </TableRow>
 
-            <TableRow
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#FC7679"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:gravity="center">
+                android:gravity="bottom|left"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="טלוויזיה מתריאה שאין אות" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="ליאורה" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="הכרם 12, תל אביב" />
-
-
-                <!-- Add elements/columns in the first row-->
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="#ADA4A4"
-                android:gravity="center">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="עכשיו" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="30dp"
-                        android:onClick="cancelRequest"
-                        android:src="@drawable/cancel"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_marginRight="5dp"
-                        android:onClick="acceptRequest"
-                        android:layout_height="30dp"
-                        android:src="@drawable/vion"/>
-                </LinearLayout>
-
-            </TableRow>
-
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FC7679"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="עזרה עם שליחת מסמכים" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="חנה" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="רוטשילד 102, תל אביב" />
-
-
-                <!-- Add elements/columns in the first row-->
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:background="#ADA4A4"
-                android:gravity="center">
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:text="היום, 19:00" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="30dp"
-                        android:onClick="cancelRequest"
-                        android:src="@drawable/cancel"/>
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_marginRight="5dp"
-                        android:onClick="acceptRequest"
-                        android:layout_height="30dp"
-                        android:src="@drawable/vion"/>
-                </LinearLayout>
-            </TableRow>
+                <ImageView
+                    android:id="@+id/proceed"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/forward"
+                    android:onClick="finalRequest"
+                    android:tag="off" />
+            </LinearLayout>
         </TableLayout>
     </LinearLayout>
+
 </LinearLayout>

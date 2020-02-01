@@ -9,6 +9,8 @@ import android.widget.ImageView;
 
 public class SettingsActivity extends AppCompatActivity {
 
+    private String Status = "status";
+    String whereTo = "empty";
     ImageView viStatus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,8 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public void jump2(View view) {
-        startActivity(new Intent(this, NewRequestActivity.class));
+        Intent activityChangeIntent = new Intent(this, NewRequestActivity.class);
+        activityChangeIntent.putExtra(Status, whereTo);
+        this.startActivity(activityChangeIntent);
     }
 }
